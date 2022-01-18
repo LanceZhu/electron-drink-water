@@ -37,7 +37,7 @@ app.whenReady().then(() => {
   function drink(){
     if(timer) clearInterval(timer)
     timer = setInterval(() => {
-      mainWindow.minimize()
+      mainWindow.hide()
       work()
     }, 20*1000)
   }
@@ -85,10 +85,10 @@ app.whenReady().then(() => {
   ])
   tray.setContextMenu(contextMenu)
 
-  mainWindow.on('minimize',function(event){
-    event.preventDefault()
-    mainWindow.hide()
-  });
+  // mainWindow.on('minimize',function(event){
+  //   event.preventDefault()
+  //   mainWindow.hide()
+  // })
 
   mainWindow.on('close', function (event) {
       if(!app.isQuiting){
@@ -97,7 +97,7 @@ app.whenReady().then(() => {
       }
 
       return false
-  });
+  })
 })
 
 app.on('window-all-closed', function () {
