@@ -5,10 +5,8 @@
 // selectively enable features needed in the rendering
 // process.
 
-function minimize(){
-	console.log('minimize-window')
-	console.log(window.myAPI)
-	window.myAPI.ipcRenderer.send('minimize-window')
+function hide(){
+	window.myAPI.ipcRenderer.send('hide-window')
 }
 
-document.getElementById('minimize').addEventListener('click', minimize)
+document.getElementById('hide').addEventListener('click', hide)

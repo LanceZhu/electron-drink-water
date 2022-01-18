@@ -2,8 +2,15 @@
 
 ## intro
 
-don't forget drink water
+don't forget drink water. Tell you to drink every 30 minutes.
 
+## usage
+
+`Ctrl+f` - Toggle Full Screen
+
+`Ctrl+w` - Close
+
+Clink `Drink Water` - Reset the timer(30 minutes)
 ## quick start
 
 run
