@@ -46,7 +46,7 @@ app.whenReady().then(() => {
     if(timer) clearInterval(timer)
     timer = setInterval(() => {
       mainWindow.show()
-      drink()
+      // drink()
     }, 30*60*1000)
   }
 
@@ -73,7 +73,7 @@ app.whenReady().then(() => {
   })
 
   // tray area
-  const icon = nativeImage.createFromPath('resources/logo.png')
+  const icon = nativeImage.createFromPath(path.join(__dirname, 'resources', 'logo.png'))
   tray = new Tray(icon)
   let contextMenu = Menu.buildFromTemplate([{ 
         label: 'Quit',
